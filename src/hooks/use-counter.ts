@@ -1,42 +1,61 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
-export function useCounter(endValue: number, duration: number = 2000) {
+export function useCounter(endValue: number, duration: number = 2500) {
   const [count, setCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const hasAnimatedRef = useRef(false);
   const ref = useRef<HTMLDivElement>(null);
+
+  const animate = useCallback(() => {
+    if (hasAnimatedRef.current) return;
+    hasAnimatedRef.current = true;
+
+    let startTime: number | null = null;
+    const step = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 4);
+      setCount(Math.floor(eased * endValue));
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        setCount(endValue);
+      }
+    };
+
+    requestAnimationFrame(step);
+  }, [endValue, duration]);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
 
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (prefersReducedMotion) {
+      hasAnimatedRef.current = true;
+      requestAnimationFrame(() => setCount(endValue));
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-
-          let startTime: number;
-          const animate = (currentTime: number) => {
-            if (!startTime) startTime = currentTime;
-            const progress = Math.min((currentTime - startTime) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.floor(eased * endValue));
-
-            if (progress < 1) {
-              requestAnimationFrame(animate);
-            }
-          };
-
-          requestAnimationFrame(animate);
+        if (entry.isIntersecting) {
+          animate();
+          observer.unobserve(element);
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.05, rootMargin: "0px 0px 100px 0px" },
     );
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, [endValue, duration, hasAnimated]);
+  }, [endValue, animate]);
 
   return { count, ref };
 }

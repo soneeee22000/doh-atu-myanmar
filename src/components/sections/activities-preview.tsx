@@ -8,24 +8,25 @@ const recentEvents = [
     titleKey: "asia_conference",
     titleFr: "Asie sous l'influence, Asie en résistance",
     titleEn: "Asia Under Influence, Asia in Resistance",
-    date: "2024-11",
+    date: "Novembre 2024",
     location: "Mairie de Paris",
+    category: "Conference",
   },
   {
     titleKey: "culinary_conference",
     titleFr: "Le Monde culinaire birman",
     titleEn: "The Burmese Culinary World",
-    date: "2024-10",
-    location: "Les Cafés Géographiques, Paris",
+    date: "Octobre 2024",
+    location: "Les Cafés Géographiques",
+    category: "Conference",
   },
   {
     titleKey: "rohingya_roundtable",
-    titleFr:
-      "Rohingya refugee crisis: reflecting on hindered humanitarian access",
-    titleEn:
-      "Rohingya refugee crisis: reflecting on hindered humanitarian access",
-    date: "2024-06",
-    location: "Médecins du Monde, Paris",
+    titleFr: "Rohingya refugee crisis",
+    titleEn: "Rohingya refugee crisis",
+    date: "Juin 2024",
+    location: "Médecins du Monde",
+    category: "Table ronde",
   },
 ] as const;
 
@@ -33,57 +34,70 @@ export function ActivitiesPreview() {
   const t = useTranslations("activities");
 
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-24 md:py-36">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="flex items-end justify-between">
-            <h2 className="font-[family-name:var(--font-display)] text-3xl font-semibold text-foreground sm:text-4xl md:text-5xl">
-              {t("title")}
-            </h2>
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
+                {t("events_count", { count: 19 })}
+              </p>
+              <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">
+                {t("title")}
+              </h2>
+            </div>
             <Link
               href="/activities"
-              className="hidden items-center gap-2 text-sm font-medium text-primary transition-colors duration-200 hover:text-primary-dark sm:inline-flex"
+              className="group hidden items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background sm:inline-flex"
             >
               {t("view_all")}
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
-
-          <p className="mt-4 text-muted-foreground">
-            {t("events_count", { count: 16 })}
-          </p>
         </ScrollReveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
           {recentEvents.map((event, index) => (
             <ScrollReveal key={event.titleKey} delay={index * 100}>
-              <article className="group h-full rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
-                <div className="mb-4 flex items-center gap-4 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-1.5">
-                    <Calendar className="h-4 w-4" />
-                    {event.date}
+              <article className="group relative h-full overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2">
+                {/* Top accent bar */}
+                <div className="h-1 w-full bg-primary/20 transition-colors duration-500 group-hover:bg-primary" />
+
+                <div className="p-8">
+                  <span className="mb-4 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                    {event.category}
                   </span>
-                  <span className="flex items-center gap-1.5">
-                    <MapPin className="h-4 w-4" />
-                    {event.location}
-                  </span>
+
+                  <h3 className="mb-6 font-[family-name:var(--font-display)] text-xl font-semibold leading-snug text-foreground">
+                    {event.titleFr}
+                  </h3>
+
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4 text-primary/60" />
+                      <span>{event.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4 text-primary/60" />
+                      <span>{event.location}</span>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold leading-snug text-foreground">
-                  {event.titleFr}
-                </h3>
               </article>
             </ScrollReveal>
           ))}
         </div>
 
         <ScrollReveal>
-          <Link
-            href="/activities"
-            className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors duration-200 hover:text-primary-dark sm:hidden"
-          >
-            {t("view_all")}
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="mt-10 text-center sm:hidden">
+            <Link
+              href="/activities"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-primary"
+            >
+              {t("view_all")}
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
         </ScrollReveal>
       </div>
     </section>
