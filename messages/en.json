@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "title": "Doh Atu – Together for Myanmar",
+    "description": "Association promoting peace, human rights, and democracy in Myanmar through culture, art, literature, and craftsmanship."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "activities": "Activities",
+    "news": "News",
+    "support": "Support Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Together for Myanmar",
+    "subtitle": "Promoting peace, human rights, and democracy in Myanmar through culture, art, literature, and craftsmanship",
+    "cta_discover": "Discover",
+    "cta_support": "Support Us"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "awareness": {
+      "title": "Raise Awareness",
+      "description": "Informing about the situation in Myanmar and carrying the voice of the Burmese people to the French and international community"
+    },
+    "advocacy": {
+      "title": "Advocate",
+      "description": "Promoting peace, human rights, and democracy in Myanmar and around the world"
+    },
+    "culture": {
+      "title": "Promote Culture",
+      "description": "Showcasing Myanmar through its culture, art, literature, and craftsmanship"
+    }
+  },
+  "stats": {
+    "title": "The Situation in Myanmar",
+    "arrested": "people arrested",
+    "displaced": "people displaced",
+    "airstrikes": "airstrikes",
+    "resistance": "years of resistance"
+  },
+  "activities": {
+    "title": "Our Activities",
+    "view_all": "View all activities",
+    "events_count": "{count} events organized since 2022"
+  },
+  "partners": {
+    "title": "Our Partners"
+  },
+  "cta": {
+    "title": "Join the movement for Myanmar's future",
+    "join": "Become a Member",
+    "donate": "Make a Donation",
+    "trust_loi1901": "Registered French association (loi 1901)",
+    "trust_secure": "Secure payment via HelloAsso"
+  },
+  "footer": {
+    "tagline": "A space of solidarity where France and Myanmar meet for a peaceful, sustainable, and better future",
+    "legal": "Legal notice",
+    "copyright": "© {year} Doh Atu – Together for Myanmar. All rights reserved."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Your message has been sent successfully. We will get back to you shortly.",
+    "error": "An error occurred. Please try again or contact us directly by email.",
+    "validation": {
+      "name_required": "Name is required",
+      "email_required": "Email is required",
+      "email_invalid": "Invalid email address",
+      "subject_required": "Subject is required",
+      "message_required": "Message is required",
+      "message_min": "Message must be at least 10 characters"
+    }
+  },
+  "support": {
+    "title": "Support Our Work",
+    "why_title": "Why support us?",
+    "why_description": "Your support enables us to continue raising awareness, organizing cultural events, and carrying the voice of the Burmese people in France and Europe.",
+    "membership_title": "Become a Member",
+    "membership_description": "Join Doh Atu for 30€ per year and become part of our committed community.",
+    "donate_title": "Make a Donation",
+    "donate_description": "Every contribution helps fund our awareness campaigns and cultural events.",
+    "volunteer_title": "Volunteer",
+    "volunteer_description": "Join our volunteer team to organize events, translate documents, or raise awareness in your community.",
+    "helloasso_fallback": "Complete your action on HelloAsso"
+  },
+  "about": {
+    "title": "About Us",
+    "founded": "Founded April 1, 2022",
+    "cofounders": "6 co-founders",
+    "president": "President",
+    "history_title": "Our Story",
+    "myanmar_title": "Myanmar and Its Fight for Democracy",
+    "myanmar_intro": "Myanmar is located in Southeast Asia with an area of over 675,000 km² and 55 million inhabitants. Since independence in 1948, the country has known only successive military coups.",
+    "coup_title": "The 2021 Coup",
+    "coup_description": "On February 1, 2021, the third military coup took place — the bloodiest in Myanmar's history. The Burmese people massively rejected military interference, giving birth to the Civil Disobedience Movement (CDM).",
+    "crisis_title": "An Unprecedented Humanitarian Crisis",
+    "crisis_description": "Over 3 million people displaced internally, half of them children. More than 15.8 million people are in urgent need of humanitarian assistance.",
+    "resistance_title": "The Resistance Persists",
+    "resistance_description": "Despite repression, the resistance of the Burmese people is gaining ground. The creativity of ultra-connected generations and the determination of the people are weakening the military regime."
+  },
+  "news": {
+    "title": "News",
+    "coming_soon": "New publications coming soon.",
+    "stay_tuned": "Follow us on social media to stay informed."
+  }
+}

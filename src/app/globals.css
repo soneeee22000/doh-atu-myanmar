@@ -1,26 +1,204 @@
 @import "tailwindcss";
 
+/* ===== DESIGN SYSTEM: WARM MINIMALISM ===== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf7f2;
+  --foreground: #2c2416;
+  --primary: #b8860b;
+  --primary-dark: #8b6914;
+  --primary-light: #d4a03c;
+  --muted: #e8e2d9;
+  --muted-foreground: #6b5e4f;
+  --accent: #a0522d;
+  --accent-light: #c4724d;
+  --card: #ffffff;
+  --card-foreground: #2c2416;
+  --border: #d9d0c4;
+  --ring: #b8860b;
+  --destructive: #8b2020;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-myanmar: var(--font-myanmar);
+
+  --animate-fade-in: fade-in 700ms ease-out both;
+  --animate-fade-in-up: fade-in-up 700ms ease-out both;
+  --animate-fade-in-down: fade-in-down 500ms ease-out both;
+  --animate-scale-in: scale-in 700ms ease-out both;
+  --animate-counter: counter-pulse 300ms ease-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ===== KEYFRAMES ===== */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes counter-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ===== BASE STYLES ===== */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), "Noto Sans", system-ui, sans-serif;
+}
+
+/* ===== LOCALE-SPECIFIC TYPOGRAPHY ===== */
+
+html[lang="my"] body {
+  font-family:
+    var(--font-myanmar), "Noto Serif Myanmar", "Myanmar Text", "Padauk",
+    sans-serif;
+  font-size: 110%;
+  line-height: 2;
+}
+
+html[lang="my"] h1,
+html[lang="my"] h2,
+html[lang="my"] h3 {
+  font-family:
+    var(--font-myanmar), "Noto Serif Myanmar", "Myanmar Text", sans-serif;
+  line-height: 1.5;
+}
+
+/* ===== SCROLL-DRIVEN ANIMATIONS ===== */
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+      opacity 700ms ease-out,
+      transform 700ms ease-out;
+  }
+
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition:
+      opacity 700ms ease-out,
+      transform 700ms ease-out;
+  }
+
+  .scroll-reveal-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .stagger-1 {
+    transition-delay: 75ms;
+  }
+  .stagger-2 {
+    transition-delay: 150ms;
+  }
+  .stagger-3 {
+    transition-delay: 225ms;
+  }
+  .stagger-4 {
+    transition-delay: 300ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ===== FOCUS STYLES (ACCESSIBLE) ===== */
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===== SELECTION ===== */
+
+::selection {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/* ===== SMOOTH SCROLL ===== */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

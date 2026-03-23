@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "title": "Doh Atu – Ensemble pour le Myanmar",
+    "description": "Association pour la promotion de la paix, des droits humains et de la démocratie au Myanmar. Sensibiliser, porter la voix, promouvoir la culture."
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "Qui sommes-nous",
+    "activities": "Activités",
+    "news": "Actualités",
+    "support": "Nous soutenir",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Ensemble pour le Myanmar",
+    "subtitle": "Promouvoir la paix, les droits humains et la démocratie au Myanmar à travers la culture, l'art, la littérature et l'artisanat",
+    "cta_discover": "Découvrir",
+    "cta_support": "Nous soutenir"
+  },
+  "mission": {
+    "title": "Notre mission",
+    "awareness": {
+      "title": "Sensibiliser",
+      "description": "Informer sur la situation en Birmanie et porter la voix du peuple birman auprès de la communauté française et internationale"
+    },
+    "advocacy": {
+      "title": "Défendre",
+      "description": "Promouvoir la paix, les droits humains et la démocratie en Birmanie et dans le monde"
+    },
+    "culture": {
+      "title": "Promouvoir",
+      "description": "Faire rayonner la Birmanie à travers sa culture, son art, sa littérature et son artisanat"
+    }
+  },
+  "stats": {
+    "title": "La situation au Myanmar",
+    "arrested": "personnes arrêtées",
+    "displaced": "personnes déplacées",
+    "airstrikes": "frappes aériennes",
+    "resistance": "ans de résistance"
+  },
+  "activities": {
+    "title": "Nos activités",
+    "view_all": "Voir toutes les activités",
+    "events_count": "{count} événements organisés depuis 2022"
+  },
+  "partners": {
+    "title": "Nos partenaires"
+  },
+  "cta": {
+    "title": "Rejoignez le mouvement pour l'avenir du Myanmar",
+    "join": "Devenir membre",
+    "donate": "Faire un don",
+    "trust_loi1901": "Association loi 1901",
+    "trust_secure": "Paiement sécurisé via HelloAsso"
+  },
+  "footer": {
+    "tagline": "L'espace solidaire où se rencontrent la France et le Myanmar pour un avenir paisible, durable et meilleur",
+    "legal": "Mentions légales",
+    "copyright": "© {year} Doh Atu – Ensemble pour le Myanmar. Tous droits réservés."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "name": "Nom",
+    "email": "E-mail",
+    "subject": "Objet",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi en cours...",
+    "success": "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.",
+    "error": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement par e-mail.",
+    "validation": {
+      "name_required": "Le nom est requis",
+      "email_required": "L'e-mail est requis",
+      "email_invalid": "L'adresse e-mail n'est pas valide",
+      "subject_required": "L'objet est requis",
+      "message_required": "Le message est requis",
+      "message_min": "Le message doit contenir au moins 10 caractères"
+    }
+  },
+  "support": {
+    "title": "Soutenez notre action",
+    "why_title": "Pourquoi nous soutenir ?",
+    "why_description": "Votre soutien nous permet de continuer à sensibiliser, organiser des événements culturels et porter la voix du peuple birman en France et en Europe.",
+    "membership_title": "Devenir membre",
+    "membership_description": "Adhérez à Doh Atu pour 30€ par an et rejoignez notre communauté engagée.",
+    "donate_title": "Faire un don",
+    "donate_description": "Chaque contribution compte pour financer nos actions de sensibilisation et nos événements culturels.",
+    "volunteer_title": "Bénévolat",
+    "volunteer_description": "Rejoignez notre équipe de bénévoles pour organiser des événements, traduire des documents ou sensibiliser votre entourage.",
+    "helloasso_fallback": "Complétez votre action sur HelloAsso"
+  },
+  "about": {
+    "title": "Qui sommes-nous",
+    "founded": "Fondée le 1er avril 2022",
+    "cofounders": "6 co-fondatrices",
+    "president": "Présidente",
+    "history_title": "Notre histoire",
+    "myanmar_title": "La Birmanie et sa lutte pour la démocratie",
+    "myanmar_intro": "La Birmanie se situe en Asie du Sud-Est avec une superficie de plus de 675 000 km² et 55 millions d'habitants. Depuis l'indépendance en 1948, le pays n'a connu que des coups d'État successifs.",
+    "coup_title": "Le coup d'État de 2021",
+    "coup_description": "Le 1er février 2021, le troisième coup d'État s'est produit — le plus sanglant de l'histoire birmane. Le peuple birman a rejeté massivement l'ingérence militaire, donnant naissance au mouvement de désobéissance civile (CDM).",
+    "crisis_title": "Une crise humanitaire sans précédent",
+    "crisis_description": "Plus de 3 millions de personnes déplacées à l'intérieur du pays, dont la moitié sont des enfants. Plus de 15,8 millions de personnes sont en besoin humanitaire d'urgence.",
+    "resistance_title": "La résistance persiste",
+    "resistance_description": "Malgré la répression, la résistance du peuple birman gagne du terrain. La créativité des générations ultra-connectées et la détermination du peuple birman affaiblissent le régime militaire."
+  },
+  "news": {
+    "title": "Actualités",
+    "coming_soon": "De nouvelles publications arrivent bientôt.",
+    "stay_tuned": "Suivez-nous sur les réseaux sociaux pour rester informé."
+  }
+}
