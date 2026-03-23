@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Heart } from "lucide-react";
@@ -19,9 +20,18 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="space-y-4">
-            <span className="font-[family-name:var(--font-display)] text-xl font-bold text-foreground">
-              Doh Atu
-            </span>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/images/logo/doh-atu-logo.png"
+                alt="Doh Atu"
+                width={40}
+                height={40}
+                className="h-10 w-auto"
+              />
+              <span className="font-[family-name:var(--font-display)] text-xl font-bold text-foreground">
+                Doh Atu
+              </span>
+            </div>
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
               {t("footer.tagline")}
             </p>

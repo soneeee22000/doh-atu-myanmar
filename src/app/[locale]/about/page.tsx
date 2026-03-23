@@ -1,8 +1,9 @@
+import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { Calendar, Users, Award } from "lucide-react";
+import { Calendar, Users } from "lucide-react";
 
 type AboutPageProps = {
   params: Promise<{ locale: string }>;
@@ -45,13 +46,17 @@ function FoundingStory() {
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-8">
-            <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3 text-primary">
-              <Award className="h-6 w-6" />
+            <div className="mb-6 flex items-center gap-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 font-[family-name:var(--font-display)] text-xl font-bold text-primary">
+                TTH
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground">
+                  Tin Tin Htar Myint
+                </h3>
+                <p className="text-sm text-primary">{t("president")}</p>
+              </div>
             </div>
-            <h3 className="mb-1 text-lg font-semibold text-foreground">
-              Tin Tin Htar Myint
-            </h3>
-            <p className="mb-4 text-sm text-primary">{t("president")}</p>
             <p className="text-sm leading-relaxed text-muted-foreground">
               Epidemiologist & Sociologist
             </p>
@@ -77,6 +82,18 @@ function MyanmarContext() {
         <h2 className="font-[family-name:var(--font-display)] text-3xl font-semibold text-background sm:text-4xl md:text-5xl">
           {t("myanmar_title")}
         </h2>
+
+        <div className="relative mt-12 overflow-hidden rounded-xl">
+          <Image
+            src="/images/about/myanmar-solidarity.jpg"
+            alt="Doh Atu solidarity rally in Paris — The Junta Falls, From Paris With Love"
+            width={1200}
+            height={500}
+            className="h-64 w-full object-cover sm:h-80 md:h-96"
+            sizes="(max-width: 1280px) 100vw, 1200px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
+        </div>
 
         <div className="mt-16 space-y-12">
           {sections.map((section) => (

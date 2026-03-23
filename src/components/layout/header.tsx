@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./language-switcher";
@@ -24,8 +25,16 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80"
+          className="flex items-center gap-2 transition-opacity duration-200 hover:opacity-80"
+          aria-label="Doh Atu - Home"
         >
+          <Image
+            src="/images/logo/doh-atu-logo.png"
+            alt="Doh Atu"
+            width={36}
+            height={36}
+            className="h-9 w-auto"
+          />
           <span className="font-[family-name:var(--font-display)] text-xl font-bold tracking-tight text-foreground">
             Doh Atu
           </span>

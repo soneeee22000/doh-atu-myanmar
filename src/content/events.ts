@@ -16,6 +16,7 @@ export type Event = {
   location: string;
   category: EventCategory;
   partners?: string[];
+  image?: string;
 };
 
 export const events: Event[] = [
