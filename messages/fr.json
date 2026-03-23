@@ -109,5 +109,16 @@
     "title": "Actualités",
     "coming_soon": "De nouvelles publications arrivent bientôt.",
     "stay_tuned": "Suivez-nous sur les réseaux sociaux pour rester informé."
+  },
+  "earthquake": {
+    "badge": "Aide d'urgence",
+    "title": "Séisme au Myanmar : notre mobilisation",
+    "description": "Le 28 mars 2025, un séisme de magnitude 7.7 a frappé le centre du Myanmar près de Mandalay, faisant plus de 3 500 morts et affectant 17,2 millions de personnes. À Mandalay, 80% des bâtiments se sont effondrés.",
+    "response": "Doh Atu s'est immédiatement mobilisé pour collecter des fonds et acheminer l'aide aux populations sinistrées. Grâce à la générosité de nos donateurs, nous avons pu contribuer à l'effort humanitaire pour les victimes du séisme.",
+    "cta": "Continuer à soutenir",
+    "stat_magnitude": "Magnitude du séisme",
+    "stat_lives": "Vies perdues",
+    "stat_affected": "Personnes affectées",
+    "stat_buildings": "Bâtiments effondrés à Mandalay"
   }
 }

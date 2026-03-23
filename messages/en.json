@@ -109,5 +109,16 @@
     "title": "News",
     "coming_soon": "New publications coming soon.",
     "stay_tuned": "Follow us on social media to stay informed."
+  },
+  "earthquake": {
+    "badge": "Emergency Relief",
+    "title": "Myanmar Earthquake: Our Response",
+    "description": "On March 28, 2025, a 7.7 magnitude earthquake struck central Myanmar near Mandalay, killing over 3,500 people and affecting 17.2 million. In Mandalay, 80% of buildings collapsed.",
+    "response": "Doh Atu immediately mobilized to raise funds and deliver aid to affected communities. Thanks to the generosity of our donors, we contributed to the humanitarian relief effort for earthquake victims.",
+    "cta": "Continue supporting",
+    "stat_magnitude": "Earthquake magnitude",
+    "stat_lives": "Lives lost",
+    "stat_affected": "People affected",
+    "stat_buildings": "Buildings collapsed in Mandalay"
   }
 }
